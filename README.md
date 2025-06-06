@@ -83,10 +83,6 @@ This Next.js app can be deployed to Vercel with minimal configuration:
 
 Remember to add your `GEMINI_API_KEY` to the environment variables in your Vercel project settings.
 
-## License
-
-[MIT](LICENSE)
-
 ## Contact
 
 Rithish Jakkireddy - [rithishjakkireddy@gmail.com](mailto:rithishjakkireddy@gmail.com)
