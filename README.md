@@ -4,11 +4,11 @@
 
 This application is an interactive portfolio website featuring a chatbot that simulates conversations with Rithish Jakkireddy. Visitors can ask questions about Rithish's professional background, skills, and experience, with the chatbot responding as if it were Rithish himself. The chatbot is powered by Google's Gemini AI model, ensuring natural, conversational responses based on resume data.
 
-![Resume Chatbot Demo](/public/chatbot-demo.png)
+![Resume Chatbot Demo](https://chatbot-nextjs-rj.vercel.app/)
 
 ## Features
 
-- **Interactive Chat Interface**: Engage in natural conversation with a chatbot that represents Rithish
+- **Chat Interface**: Engage in natural conversation with a chatbot that represents Rithish
 - **Resume-Informed Responses**: AI responses based on actual resume data for accurate information
 - **Real-time Interaction**: Instant responses with typing indicators for a better user experience
 - **Mobile-Responsive Design**: Optimized for both desktop and mobile devices
