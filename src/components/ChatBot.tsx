@@ -105,7 +105,6 @@ const ChatBot: React.FC = () => {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [hasInteracted, setHasInteracted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -116,19 +115,9 @@ const ChatBot: React.FC = () => {
       });
     }
   };
-
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (!isOpen) {
-        setHasInteracted(true);
-      }
-    }, 1500);
-    return () => clearTimeout(timer);
-  }, [isOpen]);
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -231,7 +220,6 @@ const ChatBot: React.FC = () => {
         <button
           onClick={() => {
             setIsOpen(true);
-            setHasInteracted(true);
           }}
           className="chat-toggle-button"
           aria-label="Toggle chat"
