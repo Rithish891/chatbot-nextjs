@@ -1,36 +1,92 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Resume Chatbot - Interactive Portfolio Experience
+
+## Overview
+
+This application is an interactive portfolio website featuring a chatbot that simulates conversations with Rithish Jakkireddy. Visitors can ask questions about Rithish's professional background, skills, and experience, with the chatbot responding as if it were Rithish himself. The chatbot is powered by Google's Gemini AI model, ensuring natural, conversational responses based on resume data.
+
+![Resume Chatbot Demo](/public/chatbot-demo.png)
+
+## Features
+
+- **Interactive Chat Interface**: Engage in natural conversation with a chatbot that represents Rithish
+- **Resume-Informed Responses**: AI responses based on actual resume data for accurate information
+- **Real-time Interaction**: Instant responses with typing indicators for a better user experience
+- **Mobile-Responsive Design**: Optimized for both desktop and mobile devices
+- **Expandable Chat Window**: Chat that can be minimized or expanded based on user preference
+
+## Technology Stack
+
+- **Frontend**: React 19, Next.js 15 with App Router
+- **AI Integration**: Google Generative AI (Gemini 2.0 Flash model)
+- **Styling**: TailwindCSS 4
+- **Language**: TypeScript
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.x or higher
+- Google Gemini API key ([Get it here](https://ai.google.dev/))
+
+### Environment Setup
+
+1. Clone the repository
+2. Create a `.env.local` file in the project root with:
+
+```
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `/src/components/ChatBot.tsx` - Main chatbot interface component
+- `/src/lib/gemini.ts` - Google Generative AI integration
+- `/src/lib/chat-service.ts` - Service for managing chat interactions
+- `/src/lib/resume-data.ts` - Resume data used to inform chatbot responses
+- `/src/app/api/chat/route.ts` - API route handling chat requests
+- `/src/types/chat.ts` - TypeScript definitions for chat functionality
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Customization
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To customize this chatbot for your own portfolio:
 
-## Deploy on Vercel
+1. Update `/src/lib/resume-data.ts` with your personal information
+2. Adjust the system instructions in `/src/lib/gemini.ts` to reflect your identity
+3. Modify the UI components in `/src/components/ChatBot.tsx` as needed
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This Next.js app can be deployed to Vercel with minimal configuration:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyourusername%2Fchatbot-next)
+
+Remember to add your `GEMINI_API_KEY` to the environment variables in your Vercel project settings.
+
+## License
+
+[MIT](LICENSE)
+
+## Contact
+
+Rithish Jakkireddy - [rithishjakkireddy@gmail.com](mailto:rithishjakkireddy@gmail.com)
