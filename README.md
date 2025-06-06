@@ -1,4 +1,4 @@
-# Resume Chatbot - Interactive Portfolio Experience
+# Resume Chatbot
 
 ## Overview
 
